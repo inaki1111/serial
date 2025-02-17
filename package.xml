@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
-<package>
+<package format="3">
   <name>serial</name>
+  <!--Fork made to make it work with ROS2 Jazzy-->
   <version>1.2.1</version>
   <description>
     Serial is a cross-platform, simple to use library for using serial ports on computers.
-    This library provides a C++, object oriented interface for interacting with RS-232
+    This library provides a C++, object-oriented interface for interacting with RS-232
     like devices on Linux and Windows.
   </description>
 
   <maintainer email="william@osrfoundation.org">William Woodall</maintainer>
-
   <license>MIT</license>
 
   <url type="website">http://wjwwood.github.com/serial/</url>
@@ -19,6 +19,15 @@
   <author email="wjwwood@gmail.com">William Woodall</author>
   <author email="ash.gti@gmail.com">John Harrison</author>
 
-  <buildtool_depend>catkin</buildtool_depend>
 
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <build_depend>ament_cmake</build_depend>
+  <build_depend>rclcpp</build_depend>
+
+  <exec_depend>rclcpp</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
 </package>
